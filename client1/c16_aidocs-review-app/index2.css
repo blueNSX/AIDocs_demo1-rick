@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.6;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Responsive Header Section */
+.Header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+}
+
+.AIHeaderLogo,
+.HeaderVideoDemo,
+.HeaderLogon,
+.AboutAI {
+    margin: 5px;
+    text-align: center;
+}
+
+.AIHeaderLogo a,
+.HeaderVideoDemo a,
+.HeaderLogon a,
+.AboutAI a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive Marketing Section */
+.Marketing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.Marketing .list {
+    flex: 1 1 300px;
+    min-width: 250px;
+    list-style-type: none;
+}
+
+.Marketing .item,
+.Marketing .itemshowmore {
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.Marketing .itemshowmore {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Responsive Chat Section */
+.Chat {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.ConversationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive Footer */
+.Footer {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.AIFooterLogo,
+.FooterLogoText {
+    font-size: 1.2em;
+}
+
+/* Popup/Modal Responsiveness */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal .content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+}
+
+/* Media Queries for Fine-Tuned Responsiveness */
+/* Small Devices (Phones - Portrait) */
+@media screen and (max-width: 480px) {
+    .Header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Marketing {
+        flex-direction: column;
+    }
+
+    .Marketing .list {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .modal .content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+/* Medium Devices (Tablets - Portrait) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .Marketing {
+        flex-wrap: wrap;
+    }
+
+    .Marketing .list {
+        flex: 1 1 45%;
+    }
+
+    .modal .content {
+        margin: 15% auto;
+    }
+}
+
+/* Large Devices (Desktops and Laptops) */
+@media screen and (min-width: 769px) {
+    .Marketing .list {
+        flex: 1 1 30%;
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .modal .content {
+        margin: 5% auto;
+        max-height: 90%;
+        overflow-y: auto;
+    }
+
+    .Marketing {
+        flex-wrap: nowrap;
+    }
+
+    .Marketing .list {
+        flex: 1 1 auto;
+    }
+}
+
+/* Accessibility and Print Styles */
+@media print {
+    body {
+        font-size: 12pt;
+    }
+
+    .Header, .Footer {
+        display: none;
+    }
+}
+
+/* High Contrast and Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .Header, .Footer {
+        background-color: #1e1e1e;
+    }
+
+    .modal .content {
+        background-color: #2c2c2c;
+        color: #e0e0e0;
+    }
+}

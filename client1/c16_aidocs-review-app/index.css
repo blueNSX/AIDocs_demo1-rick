@@ -138,6 +138,7 @@ The .Header properties
 -------------------------------------------------*/
 .Header {
     background: var(--Header_background-color);
+    left: 11.8%;                               
     width: 100%;
     height: 60px;
     top: 0;                                                             /* .(40510.01.3 RJS Add top: 0) */
@@ -430,7 +431,7 @@ The .Footer properties
     background: blue;/*var(--Footer_background-color);*/
     width: 100%;
     height: 25px;                                                       /* .(40510.01.10 RJS Was: 3%;) */
-    /*top: 80px;  Removed in place of the bottom property*/
+    /*top: 80px;  1Removed in place of the bottom property*/
     bottom: 0;
     position: fixed;
     display: block;                                                     /* .(40501.01.6 RJS Add display: block to footer) */
@@ -519,14 +520,50 @@ h1 {
 }                                                                       /* .(40503.04.2 RJS End) */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*===========================================*/
 /* R-1 START BLOCK ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 /* Responsive Code */
 /*-----------------------------------------
 
+
+
 The @media MAX-width query properties
 iPhone Landscape
 =========================================*/
+@media only screen
+and (min-width: 851px)
+and (max-width: 1000px)                                                  /* .(40510.01.11 RJS Was: 1000px;) */
+{
+  .Header {
+    height: 60px;                                                       /* .(40426.01.25 RJS Was: 15%;) */
+    width: var(--SevenHundredPixelWidth);                               /* .(40503.05.5 RJS Use SevenHundredPixelWidth) */
+    left: 0;
+  }
+}
+
+
+
+
+
+
 @media only screen
 and (min-width: 621px)
 and (max-width: 850px)                                                  /* .(40510.01.11 RJS Was: 1000px;) */
@@ -774,6 +811,9 @@ and (max-height: 800px)
   .Marketing {
     display: flex;
   }
+  .Header {
+    left: 0;
+  }
   .HeaderVideoDemo {
     padding-left: 0px;
     margin: 0px 0px 0px 0px;
@@ -791,7 +831,7 @@ and (max-height: 800px)
     padding: 0px 0px 0px 2px;
  }
   .Chat {
-  top: 90px;
+  top: 120px;
   height: 100vh;
   }
   .content {
